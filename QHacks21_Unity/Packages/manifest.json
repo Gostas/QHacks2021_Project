@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.ptc.vuforia.engine": "git+https://git-packages.developer.vuforia.com#9.6.4",
     "com.unity.collab-proxy": "1.2.16",
     "com.unity.ide.rider": "1.1.4",
     "com.unity.ide.vscode": "1.1.4",
@@ -38,5 +39,11 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
+  },
+  "lock": {
+    "com.ptc.vuforia.engine": {
+      "revision": "9.6.4",
+      "hash": "716a8216fe89b655589017441aa8e6ea2431485c"
+    }
   }
 }
