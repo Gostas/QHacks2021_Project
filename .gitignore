@@ -1,0 +1,12 @@
+*.o
+*.json
+*.bin
+*.elf
+*.d
+*.cache
+*.pb
+*.data
+*.index
+*.a
+*.map
+*.hex
