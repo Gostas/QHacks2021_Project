@@ -1,5 +1,3 @@
-#include <Arduino.h>
-#line 1 "c:\\Users\\konst\\Documents\\QHacks21\\QHacks2021_Project\\IMU_Classifier\\IMU_Classifier.ino"
 /*
   IMU Classifier
   This example uses the on-board IMU to start reading acceleration and gyroscope
@@ -62,17 +60,12 @@ byte tensorArena[tensorArenaSize];
 
 // array to map gesture index to a name
 const char* MOVEMENTS[] = {
-  "punch",
-  "curl"
+  "push up",
+  "squat"
 };
 
 #define NUM_MOVEMENTS (sizeof(MOVEMENTS) / sizeof(MOVEMENTS[0]))
 
-#line 69 "c:\\Users\\konst\\Documents\\QHacks21\\QHacks2021_Project\\IMU_Classifier\\IMU_Classifier.ino"
-void setup();
-#line 133 "c:\\Users\\konst\\Documents\\QHacks21\\QHacks2021_Project\\IMU_Classifier\\IMU_Classifier.ino"
-void loop();
-#line 69 "c:\\Users\\konst\\Documents\\QHacks21\\QHacks2021_Project\\IMU_Classifier\\IMU_Classifier.ino"
 void setup() {
 
 //for debugging
@@ -199,11 +192,10 @@ void loop() {
         }
         Serial.println();*/
         if(tflOutputTensor->data.f[0] <= tflOutputTensor->data.f[1])
-          Serial.println("curl");
+          Serial.println("squat");
          else
-          Serial.println("punch");
+          Serial.println("push up");
       }
     }
   }
 }
-
