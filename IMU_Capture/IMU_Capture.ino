@@ -13,7 +13,7 @@
 
 #include <Arduino_LSM9DS1.h>
 
-const float accelerationThreshold = 2.5; // threshold of significant in G's
+const float accelerationThreshold = 1.75; // threshold of significant in G's
 const int numSamples = 119;
 
 int samplesRead = numSamples;
@@ -41,7 +41,6 @@ void loop() {
             // read the acceleration data
             IMU.readAcceleration(aX, aY, aZ);
 
-            // sum up the absolutes
             float aSum = fabs(aX) + fabs(aY) + fabs(aZ);
 
             // check if it's above the threshold
